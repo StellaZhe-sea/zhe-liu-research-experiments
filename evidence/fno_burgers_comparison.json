@@ -1,0 +1,141 @@
+{
+  "configuration_checkpoint": "[local path omitted]",
+  "protocol": {
+    "models": [
+      "FNO",
+      "Plain Multigrade",
+      "Full Dynamic Multigrade"
+    ],
+    "plain_rule": "Only cumulative residual targets, frozen predecessors, immediate predecessor features, and additive outputs",
+    "excluded_from_plain": "No coarse solver, physical defect, adaptive residual spectrum, Fourier feature mapping, H1 loss, or validation selection",
+    "full_dynamic_grade0": "A deterministic label-free ETDRK4 low-fidelity operator with zero trainable parameters; its output is the frozen cumulative base and its residual is the Grade 1 target",
+    "test_rule": "Every epoch is saved during training; only after all optimization are checkpoints replayed on the final 200 samples"
+  },
+  "metrics": {
+    "fno4_test_relative_l2": 0.002363947294652462,
+    "plain_mg_fno_test_relative_l2": 0.007742944359779358,
+    "dynamic_mgno_test_relative_l2": 9.663196324254387e-06,
+    "grade0_test_relative_l2": 0.0001885022211354226,
+    "grade0_trainable_parameters": 0,
+    "plain_grade_progression": [
+      0.01479258805513382,
+      0.00825298085808754,
+      0.007739161029458046,
+      0.007742944359779358
+    ],
+    "fno4_over_dynamic": 244.63409573072752,
+    "plain_over_dynamic": 801.2819050715917,
+    "dynamic_parameters": 1820557,
+    "plain_parameters": 1814996,
+    "plain_width": 114,
+    "fno4_parameters": 1823000,
+    "fno4_width": 117,
+    "plain_training_seconds": 129.9784089999739
+  },
+  "dynamic_config": {
+    "data": "[local path omitted]",
+    "output_dir": "[local path omitted]",
+    "device": "cuda",
+    "seed": 0,
+    "ntrain": 1000,
+    "ntest": 200,
+    "resolution": 1024,
+    "batch_size": 20,
+    "modes": 16,
+    "widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "depths": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "epochs": [
+      100,
+      100,
+      150,
+      150
+    ],
+    "learning_rates": [
+      0.001,
+      0.001,
+      0.001,
+      0.001
+    ],
+    "grade_scheduler_steps": [
+      50,
+      50,
+      75,
+      75
+    ],
+    "grade_scheduler_gammas": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "baseline_epochs": 500,
+    "baseline_depth": 4,
+    "weight_decay": 0.0001,
+    "scheduler_step": 100,
+    "scheduler_gamma": 0.5,
+    "basis_min_modes": 4,
+    "basis_max_modes": 32,
+    "residual_basis_modes": [
+      32,
+      32,
+      32
+    ],
+    "basis_energy": 0.997,
+    "relative_error_score_power": 0.25,
+    "coherence_score_power": 0.5,
+    "consensus_folds": 5,
+    "consensus_variation_penalty": 1.0,
+    "new_frequency_fraction": 0.625,
+    "residual_energy_floor_fraction": 0.001,
+    "minimum_new_modes": 2,
+    "soft_frequency_floor": 0.05,
+    "residual_mse_weight": 0.25,
+    "spectral_weights": [
+      0.0,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "h1_weights": [
+      0.0,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "h1_truth_floor_ratio": 1e-06,
+    "predictor_weights": [
+      0.0,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "run_fno4_baseline": true,
+    "verbose_every": 1,
+    "post_training_test_audit": true,
+    "keep_epoch_checkpoints": false,
+    "cache_frozen_features": true,
+    "overwrite": false,
+    "viscosity": 0.1,
+    "final_time": 1.0,
+    "defect_shift": 0.001,
+    "gate_floor_ratio": 0.01,
+    "gate_noise_multiplier": 3.0,
+    "gate_soft_floor": 0.05,
+    "gate_temperature_ratio": 0.15,
+    "coarse_resolution": 128,
+    "coarse_solver_steps": 16,
+    "validation_start": 1000,
+    "validation_size": 200,
+    "minimum_validation_gain": 0.001
+  }
+}

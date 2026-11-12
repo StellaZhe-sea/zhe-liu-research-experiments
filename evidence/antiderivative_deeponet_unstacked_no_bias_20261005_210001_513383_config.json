@@ -1,0 +1,35 @@
+{
+  "case": "antiderivative",
+  "model": "DeepONet",
+  "variant": "unstacked_no_bias",
+  "equation": "ds/dx=u(x), s(0)=0, x in [0,1]",
+  "stacked": false,
+  "use_bias": false,
+  "bias_semantics": "Official OpNN use_bias flag controls the final branch layer bias and scalar output bias",
+  "branch": [
+    100,
+    40,
+    40
+  ],
+  "trunk": [
+    1,
+    40,
+    40
+  ],
+  "T": 1,
+  "sensors": 100,
+  "grf_length_scale": 0.2,
+  "train_functions": 10000,
+  "training_points_per_function": 1,
+  "test_functions": 100000,
+  "epochs": 50000,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "activation": "relu",
+  "initializer": "Glorot normal",
+  "initializer_note": "Appendix does not fix an initializer; He normal is supported by official stacked OpNN",
+  "seed": 42,
+  "interpreter": "[local path omitted]",
+  "checkpoint_selection": "minimum training loss, official repository convention",
+  "source": "Paper Appendix Tables S2, S3, S6; official DeepXDE 0.11.2 OpNN"
+}

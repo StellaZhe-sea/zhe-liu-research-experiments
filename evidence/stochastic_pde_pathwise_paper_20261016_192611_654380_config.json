@@ -1,0 +1,45 @@
+{
+  "case": "stochastic_pde_pathwise",
+  "equation": "-d/dx(exp(b(x,omega))*du/dx)=10",
+  "seed": 42,
+  "seed_note": "Local seed, not a documented paper seed",
+  "kernel": "RBF",
+  "length_scale_range": [
+    1,
+    2
+  ],
+  "KL_modes": 5,
+  "sensors_per_mode": 20,
+  "reference_grid": 100,
+  "branch": [
+    100,
+    100,
+    100
+  ],
+  "trunk": [
+    6,
+    100,
+    100
+  ],
+  "trunk_order": "xi_1,...,xi_5,x (official code ordering)",
+  "train_functions": 10000,
+  "test_functions": 10000,
+  "points_per_function": 100,
+  "train_points": 1000000,
+  "test_points": 1000000,
+  "epochs": 50000,
+  "learning_rate": 0.001,
+  "activation": "relu",
+  "initializer": "Glorot normal",
+  "optimizer": "Adam",
+  "batch_size": "full dataset, official run default",
+  "checkpoint_selection": "minimum recorded full training MSE",
+  "paper_test_mse_mean": 0.002,
+  "interpreter": "[local path omitted]",
+  "source": "Main paper Problem 6/Fig.6a; Appendix S2/S3; official SPDESystem pathwise solver with explicit paper sigma",
+  "boundary_conditions": "u(0)=u(1)=0",
+  "forcing": 10,
+  "sigma": 0.1,
+  "random_variable_clipping": false,
+  "scaling_note": "Main paper specifies sigma=0.1; official pathwise block omits scaling. Local GRFs subclass scales both reference and branch KL modes by 0.1."
+}

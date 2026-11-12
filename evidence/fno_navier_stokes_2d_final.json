@@ -1,0 +1,9 @@
+{
+  "epoch": "5.000000000000000000e+02",
+  "epoch_seconds": "1.497416859999066219e+01",
+  "train_step_relative_l2": "9.740713739395142137e-03",
+  "train_full_relative_l2": "9.903966367244720903e-03",
+  "test_step_relative_l2": "1.166890108585357660e-02",
+  "test_full_relative_l2": "1.200467541813850410e-02",
+  "learning_rate": "7.812500000000000163e-05"
+}

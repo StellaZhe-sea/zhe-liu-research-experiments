@@ -1,0 +1,14 @@
+{
+  "seed": 0,
+  "ntrain": 1000,
+  "ntest": 100,
+  "subsampling_rate": 3,
+  "grid_size": 141,
+  "batch_size": 20,
+  "epochs": 500,
+  "learning_rate": 0.001,
+  "step_size": 100,
+  "gamma": 0.5,
+  "modes": 12,
+  "width": 32
+}

@@ -1,0 +1,21 @@
+{
+  "case": "antiderivative",
+  "model": "fnn",
+  "profile": "paper",
+  "network": [
+    101,
+    2560,
+    1
+  ],
+  "T": 1,
+  "sensors": 100,
+  "train_samples": 10000,
+  "test_samples": 100000,
+  "epochs": 50000,
+  "learning_rate": 0.001,
+  "activation": "relu",
+  "seed": 43,
+  "interpreter": "[local path omitted]",
+  "checkpoint_selection": "minimum training loss, official repository convention",
+  "source": "Paper main text, antiderivative best width/depth; official DeepXDE implementation"
+}

@@ -1,0 +1,98 @@
+{
+  "case": "caputo_1d_legendre_gpu",
+  "seed": 42,
+  "branch": [
+    15,
+    40,
+    40,
+    40
+  ],
+  "trunk": [
+    2,
+    40,
+    40,
+    40
+  ],
+  "activation": "tanh",
+  "branch_output": "linear",
+  "trunk_output": "tanh",
+  "output": "dot product plus scalar bias",
+  "parameters": 7321,
+  "batch_size": 100000,
+  "optimizer_updates": 30000,
+  "optimizer": "TF1Adam compatibility rule",
+  "learning_rate": 0.001,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "epsilon": 1e-08,
+  "loss": "mean((prediction-reference)^2) / mean(reference^2), no denominator epsilon",
+  "precision": "float32; AMP and TF32 disabled",
+  "device": "cuda:0",
+  "torch": "2.8.0+cu128",
+  "cuda_runtime": "12.8",
+  "interpreter": "[local path omitted]",
+  "source_run": "[local path omitted]",
+  "source_config": {
+    "case": "caputo_1d_legendre",
+    "seed": 42,
+    "seed_note": "Local shuffle/graph seed; not a paper seed",
+    "initializer_operation_seed": 12345,
+    "basis": "Legendre degrees 0..10",
+    "coefficient_range": [
+      -2,
+      2
+    ],
+    "train_functions": 10000,
+    "test_functions": 10000,
+    "sensors": 15,
+    "spatial_queries": 10,
+    "fractional_orders": 10,
+    "train_points": 1000000,
+    "branch": [
+      15,
+      40,
+      40,
+      40
+    ],
+    "trunk": [
+      2,
+      40,
+      40,
+      40
+    ],
+    "activation": "tanh",
+    "branch_output": "linear",
+    "trunk_output": "tanh",
+    "output": "dot product plus scalar bias",
+    "learning_rate": 0.001,
+    "batch_size": 100000,
+    "optimizer_updates": 30000,
+    "loss": "batch mean squared error / batch mean squared reference",
+    "L1_nodes": 2000,
+    "L1_subintervals": 1999,
+    "conventions": [
+      "S17.1 2000 points interpreted as nodes including both endpoints; repository uses 1000 subintervals",
+      "S2 30000 iterations interpreted as optimizer updates, not epochs; repository default is 1000001 epochs",
+      "Best checkpoint selected by full-training normalized MSE every 100 updates, not repository last-batch loss",
+      "Uses original network functions through TensorFlow v1 compatibility; removes redundant unused initializer variables"
+    ],
+    "source": "Appendix S17.1, Tables S2/S3 and fractional repository code; conventions explicitly recorded",
+    "interpreter": "[local path omitted]",
+    "matlab": "[local path omitted]",
+    "check_only": false
+  },
+  "initialization": "exact exported TF seed42/operation_seed12345 tensors",
+  "data_sha256": {
+    "[local path omitted]": "f92dce579d08f1524d980f24a75836dbd8735c7c846f3977b968f22f6cc9c943"
+  },
+  "implementation_sha256": {
+    "gpu_deeponet.py": "559d616f9263abce8d7f04ef59cd1d2d43e79b933c0b7ed48596bde93ed60cd2",
+    "caputo_gpu_data.py": "d0bc333b3a4d3f04e260789eda88b2aa1fd5da048f35c86e35f26bd8fb0bebb8"
+  },
+  "initialization_sha256": "8d4f0e275186666e1da63622ed6cfd9cbc5b9ff8dd374b564341fe8f0994262d",
+  "training_protocol": "same 30000-update local CPU budget; not relabeled as 30000 epochs",
+  "checkpoint_selection": "minimum full-training normalized MSE, evaluated every 100 updates",
+  "migration_caveat": "Backend and device changed; parallel float32 arithmetic is not bit-identical",
+  "sampler": "same NumPy seed42 repeatedly shuffled index array and contiguous batches as local CPU runner",
+  "protocol_digest": "aaa638500ed9f8b6ef6a02e62fe2341bca648e1818cb984a5cc441e7ace2fe2b"
+}

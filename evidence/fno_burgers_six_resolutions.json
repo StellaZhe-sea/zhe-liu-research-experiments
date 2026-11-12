@@ -1,0 +1,38 @@
+{
+  "256": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.0025140251219272613
+  },
+  "512": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.002537771202623844
+  },
+  "1024": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.002408058010041714
+  },
+  "2048": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.0025724004954099655
+  },
+  "4096": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.0023739133402705193
+  },
+  "8192": {
+    "ntrain": 1000,
+    "ntest": 100,
+    "epochs": 500,
+    "final_test_relative_l2": 0.002673600576817989
+  }
+}

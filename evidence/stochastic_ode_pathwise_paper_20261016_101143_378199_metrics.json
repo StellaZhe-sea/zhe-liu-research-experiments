@@ -1,0 +1,8 @@
+{
+  "full_test_mse": 0.001222037706667503,
+  "trimmed_test_mse": 6.745636085124358e-05,
+  "best_step": 50000,
+  "best_training_mse": 3.421575456741266e-05,
+  "parameters": 31001,
+  "training_seconds": 31967.767632400002
+}

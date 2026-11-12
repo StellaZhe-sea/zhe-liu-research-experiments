@@ -1,0 +1,92 @@
+{
+  "status": "complete",
+  "methods": [
+    "traditional",
+    "multigrade"
+  ],
+  "seed": 42,
+  "width": 64,
+  "grade_steps": [
+    1000,
+    1000,
+    1000,
+    1000
+  ],
+  "total_updates": 4000,
+  "traditional_lr": 0.001,
+  "mg_lrs": [
+    0.003,
+    0.003,
+    0.003,
+    0.003
+  ],
+  "decay_ratio": 0.01,
+  "batch_size": 1000,
+  "normalization": "standard",
+  "normalization_fitted_on": "training only",
+  "traditional_schedule": "cosine",
+  "diagnostic_only": false,
+  "parameter_matched": true,
+  "parameters": {
+    "traditional": 64836,
+    "multigrade": 64836
+  },
+  "architecture": {
+    "parameters": {
+      "traditional": 64836,
+      "multigrade": 64836
+    },
+    "parameter_matched": true,
+    "width": 64,
+    "traditional_branch": [
+      100,
+      64,
+      64,
+      64,
+      64,
+      261
+    ],
+    "traditional_trunk": [
+      1,
+      63,
+      63,
+      63,
+      63,
+      261
+    ],
+    "multigrade_hidden_widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "multigrade_head_widths": [
+      64,
+      64,
+      64,
+      64
+    ],
+    "longest_affine_path": {
+      "traditional": 5,
+      "multigrade": 5
+    },
+    "total_affine_maps": {
+      "traditional": 10,
+      "multigrade": 16
+    },
+    "parameter_formula": "14*w^2 + 117*w + 4",
+    "padding_parameters": 0,
+    "limitations": "Active trainable count differs by grade; internal widths/readout widths, total affine maps and runtime differ. Equal total capacity and longest path do not imply identical graphs or compute."
+  },
+  "hashes": {
+    "[local path omitted]": "fe924c92a919729cc0efbd2e5a3738b90845e847141169e026f8521b04ffaaba"
+  },
+  "interpreter": "[local path omitted]",
+  "device": "cuda:0",
+  "validation_data": "[local path omitted]",
+  "selection": "Training MSE initial/every1000 updates/final within each training segment; validation ranks configurations only",
+  "fairness": "Equal total learned parameters, longest affine path, data, full-batch update budget, optimizer family. Active parameters, internal/readout widths, total affine maps and runtime differ.",
+  "test_access": "Final protocol frozen before fresh test generation; test is monitoring only",
+  "frozen_config_sha256": "202658c9bde0e1429fb24ce48d01cb698c0582fedc661f2df0412564523b02fd",
+  "final_test_sha256": "93d6a569a8938191bc6d0d3ae72613c71e337fc02a694941cf64806ecf7f5aa0"
+}

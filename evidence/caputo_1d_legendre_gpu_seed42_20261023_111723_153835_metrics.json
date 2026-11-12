@@ -1,0 +1,27 @@
+{
+  "case": "legendre",
+  "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+  "parameters": 7321,
+  "best_step": 29500,
+  "optimizer_updates": 30000,
+  "train": {
+    "mse": 0.026024108732719882,
+    "normalized_mse": 0.00010580437907145105,
+    "relative_l2": 0.010286125561719098
+  },
+  "test": {
+    "mse": 0.02658979863593798,
+    "normalized_mse": 0.00010721277860282679,
+    "relative_l2": 0.010354360366668083
+  },
+  "example": {
+    "mse": 0.006190867245402274,
+    "normalized_mse": 0.0023327273997507027,
+    "relative_l2": 0.048298316738274664
+  },
+  "training_active_seconds": 228.81989220005926,
+  "training_wall_seconds": 228.81952609994914,
+  "peak_allocated_bytes": 355668480,
+  "timer": "CUDA synchronized Windows unbiased interrupt time; excludes sleep, includes periodic evaluation/checkpointing",
+  "implementation": "PyTorch CUDA migration with TF1-style Adam; not unchanged TensorFlow source"
+}

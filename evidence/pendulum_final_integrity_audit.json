@@ -1,0 +1,15 @@
+{
+  "traditional": {
+    "updates": 4000,
+    "development_trajectory_exact_match": true
+  },
+  "multigrade": {
+    "updates": 4000,
+    "development_trajectory_exact_match": true
+  },
+  "svg_count": 7,
+  "all_updates_in_every_svg": true,
+  "smoothing": false,
+  "subsampling": false,
+  "sample_sequence_equal": true
+}
