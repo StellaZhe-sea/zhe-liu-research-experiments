@@ -10,7 +10,7 @@ included. These are distinct projects, not one shared architecture.
 | --- | --- | --- |
 | Multi-grade PDE learning and residual analysis | `spectral_mgdl/helmholtz_single_pde/` | `evidence/helmholtz_single_pde.json` |
 | Further 1D NLS and 2D Helmholtz examples | `spectral_mgdl/nls_1d/`, `spectral_mgdl/helmholtz_2d/` | English source snapshots; historical NLS figure in `figures/` |
-| Multi-Grade DeepONet | `deeponet/tools/run_fair_pendulum.py` | `evidence/pendulum_*.json` |
+| [Multi-Grade DeepONet](MULTIGRADE_DEEPONET.md) | [`deeponet/tools/run_fair_pendulum.py`](deeponet/tools/run_fair_pendulum.py) | [`evidence/pendulum_summary.json`](evidence/pendulum_summary.json) and [`evidence/pendulum_protocol.json`](evidence/pendulum_protocol.json) |
 | Multi-grade FNO | `multigrade_fno/` | `evidence/fno_burgers_comparison.json` |
 | DeepONet benchmark experiments | `deeponet/tools/` | `evidence/antiderivative_*`, Caputo and stochastic metrics |
 | FNO benchmark experiments | `multigrade_fno/` | `evidence/fno_burgers_six_resolutions.json`, Darcy and Navier–Stokes metrics |
@@ -25,3 +25,4 @@ from these paper benchmark adaptations.
 
 See `RESULTS_AND_LIMITS.md` for the metric definitions and limits. Datasets,
 model weights, private files, and large generated outputs are excluded.
+
