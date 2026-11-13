@@ -7,10 +7,10 @@ grades are frozen during subsequent training.
 
 ## Source and protocol
 
-- [Multi-grade architecture](deeponet/src/models.py)
-- [Parameter-matched model construction](deeponet/src/fair_pendulum_models.py)
-- [Pendulum training and comparison](deeponet/tools/run_fair_pendulum.py)
-- [Detailed experimental protocol](deeponet/FAIR_PENDULUM_PROTOCOL.md)
+- [Multi-grade architecture](multigrade_deeponet/src/models.py)
+- [Parameter-matched model construction](multigrade_deeponet/src/fair_pendulum_models.py)
+- [Pendulum training and comparison](multigrade_deeponet/tools/run_fair_pendulum.py)
+- [Detailed experimental protocol](multigrade_deeponet/FAIR_PENDULUM_PROTOCOL.md)
 
 ## Selected result
 

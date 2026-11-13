@@ -6,12 +6,12 @@ The synthetic fixed-problem 1D Helmholtz run reported a relative L2 error of
 1.1612746300746522e-10 after three frozen grades. This is one PDE instance;
 it is not evidence of unseen-operator generalization.
 
-The additional NLS and 2D Helmholtz code snapshots were retained from the
-earlier source archive. The NLS figure was generated historically and shows
-relative L2 error about 7.19e-09 after three grades. Its raw training log is
-not available in this release, and the included notebook is not an archived
-exact replay of that figure. The 2D Helmholtz code has no matched output
-artifact in this release, so no quantitative claim is made for it.
+The expanded [`spectral_mgdl/`](spectral_mgdl/) archive includes 19 figures,
+machine-readable metrics, and per-experiment documentation. The reported
+single-PDE, multi-PDE, NLS, 2D Helmholtz, and ablation results use different
+protocols and cannot be ranked as one benchmark. See its
+[result boundaries](spectral_mgdl/docs/RESULT_BOUNDARIES.md) for the scope of
+historical runs, synthetic targets, and negative results.
 
 ## Multi-grade FNO
 

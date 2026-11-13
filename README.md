@@ -8,11 +8,10 @@ included. These are distinct projects, not one shared architecture.
 
 | CV research line | Source | Selected evidence |
 | --- | --- | --- |
-| Multi-grade PDE learning and residual analysis | `spectral_mgdl/helmholtz_single_pde/` | `evidence/helmholtz_single_pde.json` |
-| Further 1D NLS and 2D Helmholtz examples | `spectral_mgdl/nls_1d/`, `spectral_mgdl/helmholtz_2d/` | English source snapshots; historical NLS figure in `figures/` |
-| [Multi-Grade DeepONet](MULTIGRADE_DEEPONET.md) | [`deeponet/tools/run_fair_pendulum.py`](deeponet/tools/run_fair_pendulum.py) | [`evidence/pendulum_summary.json`](evidence/pendulum_summary.json) and [`evidence/pendulum_protocol.json`](evidence/pendulum_protocol.json) |
+| [Spectral-residual multi-grade PDE learning](spectral_mgdl/README.md) | [`spectral_mgdl/src/`](spectral_mgdl/src/) | [19 figures](spectral_mgdl/results/figures/), [machine-readable metrics](spectral_mgdl/results/metrics.json), and [result boundaries](spectral_mgdl/docs/RESULT_BOUNDARIES.md) |
+| [Multi-Grade DeepONet](MULTIGRADE_DEEPONET.md) | [`multigrade_deeponet/tools/run_fair_pendulum.py`](multigrade_deeponet/tools/run_fair_pendulum.py) | [`evidence/pendulum_summary.json`](evidence/pendulum_summary.json) and [`evidence/pendulum_protocol.json`](evidence/pendulum_protocol.json) |
 | Multi-grade FNO | `multigrade_fno/` | `evidence/fno_burgers_comparison.json` |
-| DeepONet benchmark experiments | `deeponet/tools/` | `evidence/antiderivative_*`, Caputo and stochastic metrics |
+| DeepONet benchmark experiments | `multigrade_deeponet/tools/` | `evidence/antiderivative_*`, Caputo and stochastic metrics |
 | FNO benchmark experiments | `multigrade_fno/` | `evidence/fno_burgers_six_resolutions.json`, Darcy and Navier–Stokes metrics |
 | Additional Helmholtz operator experiment | `mgno_helmholtz/` | `evidence/mgno_helmholtz_resonance_v3.json` |
 
@@ -22,6 +21,12 @@ Its license is reproduced in `multigrade_fno/UPSTREAM_FNO_LICENSE`. The Darcy
 metrics come from an attributed local adaptation of that source; the Darcy
 script is not duplicated here. My multi-grade Burgers comparison is separate
 from these paper benchmark adaptations.
+
+The `spectral_mgdl/` folder is a curated source-and-results archive for the
+submitted research report. Its 19 figures and metrics are tied to distinct
+experiments; values from different tasks are not directly comparable. The
+DeepONet and FNO folders are separate operator-learning projects and do not
+share the non-operator architecture in `spectral_mgdl/`.
 
 See `RESULTS_AND_LIMITS.md` for the metric definitions and limits. Datasets,
 model weights, private files, and large generated outputs are excluded.
