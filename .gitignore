@@ -4,7 +4,9 @@ __pycache__/
 .env
 .env.*
 data/
-results/
+/results/
+*/results/
+!spectral_mgdl/results/
 output/
 *.pt
 *.pth

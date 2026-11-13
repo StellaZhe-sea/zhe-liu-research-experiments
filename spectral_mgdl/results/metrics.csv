@@ -1,0 +1,39 @@
+experiment,metric,value,scope,source
+helmholtz_single_h1_8,relative_l2_error,2.265600e-14,"single synthetic PDE, manufactured solution",helmholtz_h1_pde_single
+helmholtz_single_reviewed_v9,relative_l2_error,4.966000e-06,"single PDE, k=200pi, RSE-gated spectral multigrade",helmholtz_spectral_v9
+helmholtz_single_recurrent_dst_fno,relative_l2_error,1.153697e-05,"single PDE, recurrent DST-FNO",helmholtz_recurrent_dst_fno
+helmholtz_single_frozen_3grade,relative_l2_error,1.161275e-10,"single PDE, frozen grades 1-3",helmholtz_frozen_operator
+helmholtz_single_frozen_3grade,relative_residual,1.159430e-10,"single PDE, frozen grades 1-3",helmholtz_frozen_operator
+helmholtz_single_frozen_3grade,pinn_residual,1.475700e-09,"single PDE, frozen grades 1-3",helmholtz_frozen_operator
+helmholtz_single_historical_dual4,relative_l2_error,2.599541e-12,"single PDE, historical spectral adaptive dual 4-grade",historical_log
+helmholtz_operator_recurrent,unseen_mean_relative_l2_error,2.013989e-04,160 train / 40 val / 40 unseen test PDEs,helmholtz_operator_recurrent
+helmholtz_operator_recurrent,unseen_max_relative_l2_error,5.626741e-03,160 train / 40 val / 40 unseen test PDEs,helmholtz_operator_recurrent
+helmholtz_operator_recurrent,unseen_mean_relative_residual,1.827555e-05,160 train / 40 val / 40 unseen test PDEs,helmholtz_operator_recurrent
+helmholtz_operator_historical_frozen,unseen_mean_relative_l2_error,1.347329e-04,historical frozen operator run,historical_log
+helmholtz_operator_historical_frozen,unseen_max_relative_l2_error,3.413798e-03,historical frozen operator run,historical_log
+helmholtz_operator_historical_frozen,unseen_mean_relative_residual,1.209998e-05,historical frozen operator run,historical_log
+helmholtz2d_fft_fft,best_accepted_relative_l2_error,1.640400e-09,2D periodic synthetic problem; grades 7-8 rejected,mgdl_spectral_suite
+helmholtz2d_fft_chebyshev,best_accepted_relative_l2_error,1.640500e-01,"negative result: grade 3 rejected, run not competitive",mgdl_spectral_suite
+nls1d_cubic_historical,relative_l2_error,7.194000e-09,"manufactured nonlinear problem, 3 grades",historical_log
+nls2d_split_step,mass_relative_error,4.290000e-13,conservation check after Strang fix,nls2d_operator_validation
+nls2d_split_step,hamiltonian_relative_error,4.560000e-12,conservation check after Strang fix,nls2d_operator_validation
+nls2d_split_step,hamiltonian_relative_error_before_fix,1.160000e+00,same integrator before the Strang fix,nls2d_operator_validation
+nls2d_grade_ablation,baseline_final_rse,4.930900e-02,"8 grades, 3000 epochs per grade",nls2d_grade_ablation
+nls2d_grade_ablation,method_b_final_rse,4.930100e-02,"8 grades, 3000 epochs per grade",nls2d_grade_ablation
+nls2d_grade_ablation,pi_gnn_final_rse,4.825600e-02,8 grades; about 2.14% relative improvement over baseline,nls2d_grade_ablation
+kolmogorov_fourier,validation_relative_squared_error,9.904000e-03,"Fourier basis, Python training run",kolmogorov_train_py
+kolmogorov_wavelet,validation_relative_squared_error_printed,0.000000e+00,"printed as 0.000000; treat as below print precision, not exact zero",kolmogorov_train_py
+kolmogorov_lifting_historical,validation_relative_squared_error,2.431000e-03,historical lifting basis run,historical_log
+kolmogorov_wavelet_serial_historical,validation_relative_squared_error,2.000000e-06,historical serial wavelet run (approximate),historical_log
+spectral_gnn_ablation_baseline,final_relative_l2_error,6.870900e-03,"1D Helmholtz N=256 kappa=200pi, 2000 epochs",spectral_gnn_ablation
+spectral_gnn_ablation_energy_l2,final_relative_l2_error,4.047700e-02,5.891x worse than baseline,spectral_gnn_ablation
+spectral_gnn_ablation_distance_l2,final_relative_l2_error,3.575300e-02,5.203x worse than baseline,spectral_gnn_ablation
+spectral_gnn_ablation_mlp_l2,final_relative_l2_error,4.621300e-02,6.726x worse than baseline,spectral_gnn_ablation
+spectral_gnn_ablation_selection_l2,final_relative_l2_error,3.430200e-02,4.992x worse than baseline,spectral_gnn_ablation
+spectral_gnn_ablation_cascade_l2,final_relative_l2_error,1.601000e-02,2.330x worse than baseline,spectral_gnn_ablation
+spectral_gnn_ablation_energy_l0,final_relative_l2_error,2.961100e-02,4.310x worse than baseline,spectral_gnn_ablation
+reference_mgdl_regression,test_relative_squared_error,5.548800e-06,"third-party reference implementation, not an original contribution",reference_mgdl_regression
+reference_mgdl_regression,validation_relative_squared_error,2.009300e-04,third-party reference implementation,reference_mgdl_regression
+reference_sgdl_regression,test_relative_squared_error,9.971090e-01,"third-party reference; only 5 epochs, not a fair MGDL comparison",reference_sgdl_regression
+reference_sgdl_mnist,test_accuracy,8.146000e-01,"third-party SGDL classifier, 100 epochs",reference_mgdl_classification
+reference_sgdl_mnist,train_accuracy,9.605200e-01,"third-party SGDL classifier, 100 epochs",reference_mgdl_classification

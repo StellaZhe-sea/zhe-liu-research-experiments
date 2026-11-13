@@ -1,0 +1,268 @@
+[
+  {
+    "experiment": "helmholtz_single_h1_8",
+    "metric": "relative_l2_error",
+    "value": 2.2656e-14,
+    "scope": "single synthetic PDE, manufactured solution",
+    "source": "helmholtz_h1_pde_single"
+  },
+  {
+    "experiment": "helmholtz_single_reviewed_v9",
+    "metric": "relative_l2_error",
+    "value": 4.966e-06,
+    "scope": "single PDE, k=200pi, RSE-gated spectral multigrade",
+    "source": "helmholtz_spectral_v9"
+  },
+  {
+    "experiment": "helmholtz_single_recurrent_dst_fno",
+    "metric": "relative_l2_error",
+    "value": 1.153697e-05,
+    "scope": "single PDE, recurrent DST-FNO",
+    "source": "helmholtz_recurrent_dst_fno"
+  },
+  {
+    "experiment": "helmholtz_single_frozen_3grade",
+    "metric": "relative_l2_error",
+    "value": 1.1612746e-10,
+    "scope": "single PDE, frozen grades 1-3",
+    "source": "helmholtz_frozen_operator"
+  },
+  {
+    "experiment": "helmholtz_single_frozen_3grade",
+    "metric": "relative_residual",
+    "value": 1.1594304e-10,
+    "scope": "single PDE, frozen grades 1-3",
+    "source": "helmholtz_frozen_operator"
+  },
+  {
+    "experiment": "helmholtz_single_frozen_3grade",
+    "metric": "pinn_residual",
+    "value": 1.4757e-09,
+    "scope": "single PDE, frozen grades 1-3",
+    "source": "helmholtz_frozen_operator"
+  },
+  {
+    "experiment": "helmholtz_single_historical_dual4",
+    "metric": "relative_l2_error",
+    "value": 2.5995406e-12,
+    "scope": "single PDE, historical spectral adaptive dual 4-grade",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "helmholtz_operator_recurrent",
+    "metric": "unseen_mean_relative_l2_error",
+    "value": 0.0002013989,
+    "scope": "160 train / 40 val / 40 unseen test PDEs",
+    "source": "helmholtz_operator_recurrent"
+  },
+  {
+    "experiment": "helmholtz_operator_recurrent",
+    "metric": "unseen_max_relative_l2_error",
+    "value": 0.005626741,
+    "scope": "160 train / 40 val / 40 unseen test PDEs",
+    "source": "helmholtz_operator_recurrent"
+  },
+  {
+    "experiment": "helmholtz_operator_recurrent",
+    "metric": "unseen_mean_relative_residual",
+    "value": 1.827555e-05,
+    "scope": "160 train / 40 val / 40 unseen test PDEs",
+    "source": "helmholtz_operator_recurrent"
+  },
+  {
+    "experiment": "helmholtz_operator_historical_frozen",
+    "metric": "unseen_mean_relative_l2_error",
+    "value": 0.0001347329,
+    "scope": "historical frozen operator run",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "helmholtz_operator_historical_frozen",
+    "metric": "unseen_max_relative_l2_error",
+    "value": 0.003413798,
+    "scope": "historical frozen operator run",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "helmholtz_operator_historical_frozen",
+    "metric": "unseen_mean_relative_residual",
+    "value": 1.209998e-05,
+    "scope": "historical frozen operator run",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "helmholtz2d_fft_fft",
+    "metric": "best_accepted_relative_l2_error",
+    "value": 1.6404e-09,
+    "scope": "2D periodic synthetic problem; grades 7-8 rejected",
+    "source": "mgdl_spectral_suite"
+  },
+  {
+    "experiment": "helmholtz2d_fft_chebyshev",
+    "metric": "best_accepted_relative_l2_error",
+    "value": 0.16405,
+    "scope": "negative result: grade 3 rejected, run not competitive",
+    "source": "mgdl_spectral_suite"
+  },
+  {
+    "experiment": "nls1d_cubic_historical",
+    "metric": "relative_l2_error",
+    "value": 7.194e-09,
+    "scope": "manufactured nonlinear problem, 3 grades",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "nls2d_split_step",
+    "metric": "mass_relative_error",
+    "value": 4.29e-13,
+    "scope": "conservation check after Strang fix",
+    "source": "nls2d_operator_validation"
+  },
+  {
+    "experiment": "nls2d_split_step",
+    "metric": "hamiltonian_relative_error",
+    "value": 4.56e-12,
+    "scope": "conservation check after Strang fix",
+    "source": "nls2d_operator_validation"
+  },
+  {
+    "experiment": "nls2d_split_step",
+    "metric": "hamiltonian_relative_error_before_fix",
+    "value": 1.16,
+    "scope": "same integrator before the Strang fix",
+    "source": "nls2d_operator_validation"
+  },
+  {
+    "experiment": "nls2d_grade_ablation",
+    "metric": "baseline_final_rse",
+    "value": 0.049309,
+    "scope": "8 grades, 3000 epochs per grade",
+    "source": "nls2d_grade_ablation"
+  },
+  {
+    "experiment": "nls2d_grade_ablation",
+    "metric": "method_b_final_rse",
+    "value": 0.049301,
+    "scope": "8 grades, 3000 epochs per grade",
+    "source": "nls2d_grade_ablation"
+  },
+  {
+    "experiment": "nls2d_grade_ablation",
+    "metric": "pi_gnn_final_rse",
+    "value": 0.048256,
+    "scope": "8 grades; about 2.14% relative improvement over baseline",
+    "source": "nls2d_grade_ablation"
+  },
+  {
+    "experiment": "kolmogorov_fourier",
+    "metric": "validation_relative_squared_error",
+    "value": 0.009904,
+    "scope": "Fourier basis, Python training run",
+    "source": "kolmogorov_train_py"
+  },
+  {
+    "experiment": "kolmogorov_wavelet",
+    "metric": "validation_relative_squared_error_printed",
+    "value": 0.0,
+    "scope": "printed as 0.000000; treat as below print precision, not exact zero",
+    "source": "kolmogorov_train_py"
+  },
+  {
+    "experiment": "kolmogorov_lifting_historical",
+    "metric": "validation_relative_squared_error",
+    "value": 0.002431,
+    "scope": "historical lifting basis run",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "kolmogorov_wavelet_serial_historical",
+    "metric": "validation_relative_squared_error",
+    "value": 2e-06,
+    "scope": "historical serial wavelet run (approximate)",
+    "source": "historical_log"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_baseline",
+    "metric": "final_relative_l2_error",
+    "value": 0.0068709,
+    "scope": "1D Helmholtz N=256 kappa=200pi, 2000 epochs",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_energy_l2",
+    "metric": "final_relative_l2_error",
+    "value": 0.040477,
+    "scope": "5.891x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_distance_l2",
+    "metric": "final_relative_l2_error",
+    "value": 0.035753,
+    "scope": "5.203x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_mlp_l2",
+    "metric": "final_relative_l2_error",
+    "value": 0.046213,
+    "scope": "6.726x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_selection_l2",
+    "metric": "final_relative_l2_error",
+    "value": 0.034302,
+    "scope": "4.992x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_cascade_l2",
+    "metric": "final_relative_l2_error",
+    "value": 0.01601,
+    "scope": "2.330x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "spectral_gnn_ablation_energy_l0",
+    "metric": "final_relative_l2_error",
+    "value": 0.029611,
+    "scope": "4.310x worse than baseline",
+    "source": "spectral_gnn_ablation"
+  },
+  {
+    "experiment": "reference_mgdl_regression",
+    "metric": "test_relative_squared_error",
+    "value": 5.5488e-06,
+    "scope": "third-party reference implementation, not an original contribution",
+    "source": "reference_mgdl_regression"
+  },
+  {
+    "experiment": "reference_mgdl_regression",
+    "metric": "validation_relative_squared_error",
+    "value": 0.00020093,
+    "scope": "third-party reference implementation",
+    "source": "reference_mgdl_regression"
+  },
+  {
+    "experiment": "reference_sgdl_regression",
+    "metric": "test_relative_squared_error",
+    "value": 0.997109,
+    "scope": "third-party reference; only 5 epochs, not a fair MGDL comparison",
+    "source": "reference_sgdl_regression"
+  },
+  {
+    "experiment": "reference_sgdl_mnist",
+    "metric": "test_accuracy",
+    "value": 0.8146,
+    "scope": "third-party SGDL classifier, 100 epochs",
+    "source": "reference_mgdl_classification"
+  },
+  {
+    "experiment": "reference_sgdl_mnist",
+    "metric": "train_accuracy",
+    "value": 0.96052,
+    "scope": "third-party SGDL classifier, 100 epochs",
+    "source": "reference_mgdl_classification"
+  }
+]
